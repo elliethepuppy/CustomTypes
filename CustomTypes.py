@@ -39,6 +39,9 @@ class uint8:
     def __repr__(self) -> int:
         return self.value
 
+    def __int__(self) -> int:
+        return self.value
+
     def __add__(self, other) -> int:
         if self.value + other.__int__() > self.max_value:
             raise Exception("ERROR: Overflow detected")
@@ -161,6 +164,9 @@ class uint16:
             self.value = value
 
     def __repr__(self) -> int:
+        return self.value
+
+    def __int__(self) -> int:
         return self.value
 
     def __add__(self, other) -> int:
@@ -288,6 +294,9 @@ class uint32:
     def __repr__(self) -> str:
         return f"{self.value}"
 
+    def __int__(self) -> int:
+        return self.value
+
     def __add__(self, other) -> int:
         if self.value + other.__int__() > self.max_value:
             raise Exception("ERROR: Overflow detected")
@@ -413,6 +422,9 @@ class uint64:
     def __repr__(self) -> str:
         return f"{self.value}"
 
+    def __int__(self) -> int:
+        return self.value
+
     def __add__(self, other) -> int:
         if self.value + other.__int__() > self.max_value:
             raise Exception("ERROR: Overflow detected")
@@ -536,6 +548,9 @@ class uint128:
 
     def __repr__(self) -> str:
         return f"{self.value}"
+
+    def __int__(self) -> int:
+        return self.value
 
     def __add__(self, other) -> int:
         if self.value + other.__int__() > self.max_value:
@@ -661,6 +676,9 @@ class uintarb:
 
     def __repr__(self) -> str:
         return f"{self.value}"
+
+    def __int__(self) -> int:
+        return self.value
 
     def __add__(self, other) -> int:
         if self.value + other.__int__() > self.max_value:
